@@ -1,0 +1,14 @@
+[
+    {
+        "name": "macagrano",
+        "nickname": "mamanema",
+        "age": 18,
+        "hobbies": ["lol pleyer", "programmer","pito lover"],
+        "isPitolover": true
+    }
+    
+    {
+        "name":"Masima",
+        "nickname":["la ega", "el taira", "el que pega", "el uhu"]
+    }
+]

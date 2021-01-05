@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    position: relative;
+}
+
+.wrapper {
+    height: 100vh;
+    position: relative;
+}
+
+.calculator {
+    width: 300px;
+    height: auto;
+    background-color: #0e0d0d;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.display {
+    display: grid;
+    align-items: center;
+    text-align: right;
+    background-color: #F71735;
+    grid-template-rows: minmax(80px,auto);
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.display>* {
+    margin-right: 10px;
+}
+
+.numbersAndOperators {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.numbers {
+    display: grid;
+    grid-template: "auto auto auto";
+}
+
+.operators {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+#btn0 {
+    grid-column: 1/3;
+}
+
+#equal {
+    background-color: #F71735;
+    border: none;
+    color: white;
+}
+
+button {
+    color: white;
+    padding: 25px 10px;
+    margin-bottom: 1px;
+    background-color: #0e0d0d;
+    font-size: 20px;
+    border: none;
+}
+
+button:hover {
+    color: #F71735;
+}
+
+/* {
+    color: #F71735;
+} */
+
+#clear, #division, #multiplication, .operators>* {
+    color: #F71735;
+}
+
+#clear:hover, #division:hover, #multiplication:hover{
+    color: white;
+}
+
+.operators> *:hover {
+    color: white;
+}
+#equal:hover{
+    background-color: white;
+    color: #F71735;
+}
+.display:hover{
+    background-color: white;
+    color: #F71735;
+}
