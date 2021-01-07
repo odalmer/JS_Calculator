@@ -3,7 +3,6 @@
     padding: 0px;
     margin: 0px;
     font-family: 'Open Sans', sans-serif;
-    box-sizing: border-box;
 }
 
 body {
@@ -34,7 +33,7 @@ body {
     align-items: center;
     text-align: right;
     background-color: #F71735;
-    grid-template-rows: minmax(80px,auto);
+    grid-template-rows: minmax(80px, auto);
     word-wrap: break-word;
     word-break: break-all;
 }
@@ -71,36 +70,45 @@ body {
 button {
     color: white;
     padding: 25px 10px;
-    margin-bottom: 1px;
     background-color: #0e0d0d;
     font-size: 20px;
     border: none;
 }
 
-button:hover {
+button:active {
     color: #F71735;
+    background-color: black;
+    font-size: 18px;
 }
 
-/* {
-    color: #F71735;
-} */
+button:focus{
+    outline: none;
+}
 
 #clear, #division, #multiplication, .operators>* {
     color: #F71735;
 }
 
-#clear:hover, #division:hover, #multiplication:hover{
+#clear:hover, #division:hover, #multiplication:hover {
     color: white;
 }
 
-.operators> *:hover {
+.operators>*:hover {
     color: white;
 }
-#equal:hover{
+
+#equal:hover {
     background-color: white;
     color: #F71735;
 }
-.display:hover{
+
+.display:hover {
     background-color: white;
     color: #F71735;
+}
+
+@media(min-width: 900px) {
+    button:hover {
+        color: #F71735;
+    }
 }
