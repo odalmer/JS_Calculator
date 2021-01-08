@@ -259,12 +259,13 @@ btnDiv.addEventListener("click", e => {
 })
 
 btnRem.addEventListener('click', e => {
-    display.innerText += "÷"
+    display.innerText += "%"
     backDis.innerText = "";
+    operator = "%";
+
     if (letsOpe) {
         Operation();
     }
-    operator = "/";
 
     letsOpe = true;
 })
@@ -306,6 +307,9 @@ function Operation() {
         case "/":
             result = num1 / num2;
             break;
+        case '%':
+            result = num1 * num2;
+            result /= 100;
     }
     num1 = result;
     num2 = 0;
