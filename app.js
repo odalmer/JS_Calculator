@@ -1,3 +1,5 @@
+//this code is property of Odalmer Pimentel. insta:@odalmerp
+
 // Numbers ==============================
 let btn9 = document.getElementById('btn9');
 let btn8 = document.getElementById('btn8');
@@ -21,9 +23,11 @@ let btnRem = document.getElementById('btnRem');
 
 // Output
 const display = document.getElementById('displayText');
-
+const backDis = document.getElementById('backDisplay');
 //variables 
 let num1, num2, operator, letsOpe, haveResult;
+let result;
+
 num1 = 0;
 num2 = 0;
 letsOpe = false;
@@ -35,11 +39,11 @@ btn0.addEventListener("click", e => {
         display.innerText += "0"
     }
 
-    if (letsOpe == false) {
-        num1 = parseFloat(display.innerText);
+    backDis.innerText += '0';
+    if (letsOpe) {
+        num2 = backDis.innerText;
     } else {
-        num2 += "0";
-        num2 = parseFloat(num2);
+        num1 = backDis.innerText;
     }
 
 })
@@ -51,13 +55,11 @@ btn1.addEventListener("click", e => {
     } else {
         display.innerText += "1"
     }
-
-    if (letsOpe == false) {
-        num1 = parseFloat(display.innerText);
+    backDis.innerText += '1';
+    if (letsOpe) {
+        num2 = backDis.innerText;
     } else {
-        num2 += "1";
-        num2 = parseFloat(num2);
-        // letsOpe = false;
+        num1 = backDis.innerText;
     }
 
 })
@@ -68,11 +70,12 @@ btn2.addEventListener("click", e => {
     } else {
         display.innerText += "2"
     }
-    if (letsOpe == false) {
-        num1 = parseFloat(display.innerText);
+
+    backDis.innerText += '2';
+    if (letsOpe) {
+        num2 = backDis.innerText;
     } else {
-        num2 += "2";
-        num2 = parseFloat(num2);
+        num1 = backDis.innerText;
     }
 
 })
@@ -84,11 +87,11 @@ btn3.addEventListener("click", e => {
     } else {
         display.innerText += "3"
     }
-    if (letsOpe == false) {
-        num1 = parseFloat(display.innerText);
+    backDis.innerText += '3';
+    if (letsOpe) {
+        num2 = backDis.innerText;
     } else {
-        num2 += '3';
-        num2 = parseFloat(num2);
+        num1 = backDis.innerText;
     }
 })
 
@@ -99,11 +102,11 @@ btn4.addEventListener("click", e => {
     } else {
         display.innerText += "4"
     }
-    if (letsOpe == false) {
-        num1 = parseFloat(display.innerText);
+    backDis.innerText += '4';
+    if (letsOpe) {
+        num2 = backDis.innerText;
     } else {
-        num2 += '4';
-        num2 = parseFloat(num2);
+        num1 = backDis.innerText;
     }
 
 })
@@ -116,15 +119,11 @@ btn5.addEventListener("click", e => {
         display.innerText += "5"
 
     }
-    if (letsOpe == false) {
-        num1 = parseFloat(display.innerText);
-        console.log('num1 ' + num1)
-
+    backDis.innerText += '5';
+    if (letsOpe) {
+        num2 = backDis.innerText;
     } else {
-        num2 += '5';
-        num2 = parseFloat(num2);
-        console.log('num2 ' + num2)
-
+        num1 = backDis.innerText;
     }
 
 })
@@ -137,11 +136,11 @@ btn6.addEventListener("click", e => {
         display.innerText += "6"
 
     }
-    if (letsOpe == false) {
-        num1 = parseFloat(display.innerText);
+    backDis.innerText += '6';
+    if (letsOpe) {
+        num2 = backDis.innerText;
     } else {
-        num2 += '6';
-        num2 = parseFloat(num2);
+        num1 = backDis.innerText;
     }
 
 })
@@ -153,11 +152,11 @@ btn7.addEventListener("click", e => {
     } else {
         display.innerText += "7"
     }
-    if (letsOpe == false) {
-        num1 = parseFloat(display.innerText);
+    backDis.innerText += '7';
+    if (letsOpe) {
+        num2 = backDis.innerText;
     } else {
-        num2 += '7';
-        num2 = parseFloat(num2);
+        num1 = backDis.innerText;
     }
 
 })
@@ -168,11 +167,11 @@ btn8.addEventListener("click", e => {
     } else {
         display.innerText += "8"
     }
-    if (letsOpe == false) {
-        num1 = parseFloat(display.innerText);
+    backDis.innerText += '8';
+    if (letsOpe) {
+        num2 = backDis.innerText;
     } else {
-        num2 += '8';
-        num2 = parseFloat(num2);
+        num1 = backDis.innerText;
     }
 
 })
@@ -184,11 +183,11 @@ btn9.addEventListener("click", e => {
     } else {
         display.innerText += "9"
     }
-    if (letsOpe == false) {
-        num1 = parseFloat(display.innerText);
+    backDis.innerText += '9';
+    if (letsOpe) {
+        num2 = backDis.innerText;
     } else {
-        num2 += '9';
-        num2 = parseFloat(num2);
+        num1 = backDis.innerText;
     }
 
 })
@@ -200,77 +199,99 @@ btnDot.addEventListener("click", e => {
     } else {
         display.innerText += "."
     }
-    if (letsOpe == false) {
-        num1 = parseFloat(display.innerText);
-        console.log('num1 ' + num1)
-
+    backDis.innerText += '.';
+    if (letsOpe) {
+        num2 = backDis.innerText;
     } else {
-        num2 += '.';
-        // num2 += parseFloat(num2);
-        console.log('num2 ' + num2)
+        num1 = backDis.innerText;
     }
 })
 
 // OPERATORS =====================================
 btnAdd.addEventListener('click', e => {
-    if (haveResult == true) {
-        num1 = parseFloat(display.innerText);
-        haveResult = false
+    display.innerText += "+"
+    backDis.innerText = "";
+    if (letsOpe) {
+        Operation();
     }
-    display.innerText += "+";
     operator = "+";
+
     letsOpe = true;
+
+    // console.log('num1 ' + num1)
+    // console.log('num2 ' + num2)
+
 })
 btnSub.addEventListener('click', e => {
-    if (haveResult == true) {
-        num1 = parseFloat(display.innerText);
-        haveResult = false
+    display.innerText += "-"
+    backDis.innerText = "";
+    if (letsOpe) {
+        Operation();
     }
-    display.innerText += "-";
     operator = "-";
-    letsOpe = true;
 
+    letsOpe = true;
 })
 btnMult.addEventListener('click', e => {
-    if (haveResult == true) {
-        num1 = parseFloat(display.innerText);
-        haveResult = false
-    }
-    display.innerText += "x";
-    operator = "*";
-    letsOpe = true;
+    display.innerText += "x"
+    backDis.innerText = "";
+    console.log('num1 ' + num1);
+    console.log('num2 ' + num2);
 
+    if (letsOpe) {
+        Operation();
+    }
+    operator = "*";
+
+    letsOpe = true;
 })
 
 btnDiv.addEventListener("click", e => {
-    if (haveResult == true) {
-        num1 = parseFloat(display.innerText);
-        haveResult = false
+    display.innerText += "÷"
+    backDis.innerText = "";
+    if (letsOpe) {
+        Operation();
     }
-    display.innerText += "÷";
     operator = "/";
+
     letsOpe = true;
 
 })
 
 btnRem.addEventListener('click', e => {
-    if (haveResult == true) {
-        num1 = parseFloat(display.innerText);
-        haveResult = false
+    display.innerText += "÷"
+    backDis.innerText = "";
+    if (letsOpe) {
+        Operation();
     }
-    display.innerText += '%';
-    operator = "%"
+    operator = "/";
+
     letsOpe = true;
 })
 
 btnClear.addEventListener('click', e => {
     num1 = 0;
     num2 = 0;
+    backDis.innerText = "";
     display.innerText = "0"
 })
+
 // doing the operations
 btnEqual.addEventListener('click', e => {
-    let result;
+    letsOpe = false;
+    
+    Operation();
+    if (result > 0) {
+        display.innerText = result;
+        backDis.innerText = result;
+    }
+    letsOpe = false;
+})
+
+function Operation() {
+    num1 = parseFloat(num1);
+    num2 = parseFloat(num2);
+
     // num2 = parseFloat(display.innerText)
     switch (operator) {
         case "+":
@@ -286,16 +307,10 @@ btnEqual.addEventListener('click', e => {
             result = num1 / num2;
             break;
     }
-    if (result > 0) {
-        display.innerText = result;
-    }
     num1 = result;
     num2 = 0;
+    console.log('result ' + result)
     console.log('num1 ' + num1)
-    letsOpe = false;
-    haveResult = true;
 
-})
-
-
-// document.getElementById('displayText').innerHTML = display;
+    return result;
+}

@@ -1,3 +1,5 @@
+/* this code is property of Odalmer Pimentel. insta:@odalmerp */
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 * {
     padding: 0px;
@@ -81,7 +83,7 @@ button:active {
     font-size: 18px;
 }
 
-button:focus{
+button:focus {
     outline: none;
 }
 
@@ -105,6 +107,10 @@ button:focus{
 .display:hover {
     background-color: white;
     color: #F71735;
+}
+
+#backDisplay {
+    display: none;
 }
 
 @media(min-width: 900px) {
