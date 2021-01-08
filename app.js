@@ -258,17 +258,6 @@ btnDiv.addEventListener("click", e => {
 
 })
 
-btnRem.addEventListener('click', e => {
-    display.innerText += "%"
-    backDis.innerText = "";
-    operator = "%";
-
-    if (letsOpe) {
-        Operation();
-    }
-
-    letsOpe = true;
-})
 
 btnClear.addEventListener('click', e => {
     num1 = 0;
