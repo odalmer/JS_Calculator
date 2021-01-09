@@ -271,7 +271,7 @@ btnEqual.addEventListener('click', e => {
     letsOpe = false;
     
     Operation();
-    if (result > 0) {
+    if (result >= 0) {
         display.innerText = result;
         backDis.innerText = result;
     }
